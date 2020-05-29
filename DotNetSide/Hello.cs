@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 
-namespace DotNet.Core.Bootstrap.ExampleDll
+namespace DotNetSide
 {
     public static class Hello
     {

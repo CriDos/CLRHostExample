@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
 	// Get file paths and verify them.
 	const string_t current_directory = get_current_directory();
-	const string_t runtime_config_path = current_directory + L"DotNet.Core.Bootstrap.ExampleDll.runtimeconfig.json";
+	const string_t runtime_config_path = current_directory + L"DotNetSide.runtimeconfig.json";
 
 	if (!file_exists(runtime_config_path))
 		return exit("The runtime configuration does not exist. Ensure you have compiled the DotNet.Core.Bootstrap.ExampleDll project.");
@@ -36,8 +36,8 @@ int main(int argc, char* argv[])
 	if (!CLR->load_runtime(runtime_config_path))
 		return exit("Failed to load .NET Core Runtime");
 
-	const string_t assembly_path = current_directory + L"DotNet.Core.Bootstrap.ExampleDll.dll";
-	const string_t type_name = L"DotNet.Core.Bootstrap.ExampleDll.Hello, DotNet.Core.Bootstrap.ExampleDll";
+	const string_t assembly_path = current_directory + L"DotNetSide.dll";
+	const string_t type_name = L"DotNetSide.Hello, DotNetSide";
 	const string_t method_name = L"SayHello";
 
 	const string_t hello_message = L"Hello NET Core from C++";
