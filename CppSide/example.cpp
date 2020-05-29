@@ -1,5 +1,4 @@
 // Reloaded.Core.Bootstrap.Example.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <fstream>
 #include <iostream>
@@ -30,7 +29,7 @@ int main(int argc, char* argv[])
 	const string_t runtime_config_path = current_directory + L"DotNetSide.runtimeconfig.json";
 
 	if (!file_exists(runtime_config_path))
-		return exit("The runtime configuration does not exist. Ensure you have compiled the DotNet.Core.Bootstrap.ExampleDll project.");
+		return exit("The runtime configuration does not exist. Ensure you have compiled the DotNetSide project.");
 
 	// Load runtime and execute our method.
 	if (!CLR->load_runtime(runtime_config_path))
